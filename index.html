@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="query.css">
+    <title>Customizable Random Password Generator</title>
+</head>
+<body>
+    <div id="main-container">
+        <section class="hero-section">
+        <h1 id="head1">Generate a </h1>
+        <h1 id="head2">random password</h1>
+        <p id="para1">Never use an insecure password again.</p>
+        
+        <div class="option-container">
+                <label for="includeNumber" class="options">
+                    <input type="checkbox" id="includeNumber" onselect="true" > Numbers
+                </label>
+
+                <label for="includeSymbol" class="options"> 
+                <input type="checkbox" id="includeSymbol" onselect="true" >
+                Symbols
+                </label>
+
+                <label for="includeLowerCase" class="options"> 
+                <input type="checkbox" id="includeLowerCase" onselect="true">
+                Lowercase Characters
+                </label>
+
+                <label for="includeUpperCase" class="options"> 
+                <input type="checkbox" id="includeUpperCase" onselect="true" >
+                Uppercase Characters
+                </label>
+
+                <label for="passwordLength" class="options">
+                Length 
+                <input type="number" id="passwordLength" value="12" min="8" max="24">
+                
+                </label>
+            
+        
+        </div>
+        
+        
+
+        <button id="gButton" onclick="generate()">Generate passwords</button>
+    </section>
+    
+    <section class="display-section">
+        <div class="password-display" id="display1" role="button" tabindex="0"></div>
+        <div class="password-display" id="display2" role="button" tabindex="0"></div>
+        <!-- for accessibilty reasons, i'm advised to use role and tabindex on the div. 
+         tabindex allows users to navigate to it using TabKey -->
+    </section>
+    
+    <div id="toast"></div>
+
+</div>
+    
+
+<script src="index.js"></script>
+</body>
+</html>

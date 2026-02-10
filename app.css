@@ -1,0 +1,246 @@
+/* 
+
+---------- TYPOGRAPHY ----------
+
+FONT SIZES
+12px / 16px / 20px / 24px / 32px / 40px / 48px / 62px
+
+FONT WEIGHTS
+400 / 700
+
+LINE HEIGHTS
+1.2 / 1.5
+
+LETTER SPACING
+0 / -2px
+
+FONT FAMILY
+Poppins
+
+
+---------- COLORS ----------
+
+PRIMARY
+Tint: #ecfdf5 (Foam)
+Base: #10b981 (Mountain Meadow)
+Shade: #0d9467 (Elf green)
+
+SECONDARY
+Tint: #c3c7cc (Silver Sand)
+Base: #a0acae (Oslo gray) 🍎
+Shade: #273549 (Pickled bluewood) 🍎
+
+
+GREY
+
+White: #ffffff (White)
+Black: #333142 (Tuna)
+
+---------- BORDER RADIUS ----------
+
+4px / 8px / 20px
+
+
+---------- SPACING SYSTEM ----------
+5px / 10px / 15px / 20px / 25px / 30px / 40px / 50px / 60px / 70px / 80px / 90px / 100px / 125px / 150px / 200px / 300px / 400px / 500px
+
+*/
+
+
+/* -------------------- GLOBAL STYLES -------------------- */
+:root{
+    /* TYPOGRAPHY */
+    --text-sm: 1.2rem; /* 12px */
+    --text-base: 1.6rem; 
+    --text-paragraph: 2rem;
+    --text-h5: 2.4rem;
+    --text-h4: 3.2rem;
+    --text-h3: 4rem;
+    --text-h2: 4.8rem;
+    --text-h1: 6.2rem;
+
+    /* FONT WEIGHT */
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+
+    /*  LINE HEIGHT */
+    --line-height-tight: 1;
+    --line-height-normal: 1.5;
+
+    /* LETTER SPACING */
+    --letter-spacing-tight: -2px;
+    --letter-spacing-normal: 0;
+
+    /* FONT FAMILY */
+    font-family: 'Poppins', sans-serif;
+
+    /* COLORS */
+    --primary-tint: #ecfdf5;
+    --primary-base: #10b981;
+    --primary-shade: #0d9467;
+    --secondary-tint: #c3c7cc;
+    --secondary-base: #808a8b;
+    --secondary-shade: #273549;
+    
+    --white: #ffffff;
+    --black: #333142;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    /* 10px / 16px = 62.5% */
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: var(--primary-tint);
+    font-weight: var(--font-weight-normal);
+    line-height: var(--line-height-normal);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+
+#main-container{
+    max-width: 1200px;
+    width: 90%;
+    margin: 5rem auto;
+    padding: 1rem;
+    
+    
+}
+
+h1{
+    line-height: var(--line-height-tight);
+    letter-spacing: var(--letter-spacing-tight);
+    font-size: var(--text-h1);
+    font-weight: var(--font-weight-bold);
+    
+}
+p{
+    font-size: var(--text-paragraph);
+}
+
+#gButton{
+    margin-top: 5rem;
+    padding: 0.5rem 0.3rem;
+    color: var(--white);
+    background-color: var(--primary-base);
+    font-family: 'Poppins', sans-serif;
+    border: 2px solid var(--primary-base);
+    border-radius: 8px;
+    font-size: var(--text-base);
+    font-weight: normal;
+    cursor: pointer;
+    transition:all 0.5s ease-out;
+
+}
+
+#gButton:hover{
+    transform: scale(1.05, 1.05);
+    box-shadow: 0px 3px 6px var(--secondary-base);
+    
+
+}
+#gButton:active{
+    color: var(--black);
+}
+
+
+/* -------------------- SECTIONS -------------------- */
+.option-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--secondary-base);
+    width: 100rem;
+    margin-top: 3rem;
+    border-radius: 8px;
+    box-shadow: 0px 3px 6px var(--secondary-base);
+    cursor: pointer; 
+    padding: 10px; 
+
+}
+
+
+.options{
+    color: var(--white);
+    font-size: var(--text-base);  
+    text-align: center; 
+    accent-color: var(--primary-tint);
+}
+
+#passwordLength{
+    color: var(--black);
+    text-align: center;
+    font-size: var(--text-base);  
+    width: 4rem;
+    border-radius: 8px;
+    border: 2px solid var(--secondary-base);
+}
+
+
+
+.display-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.password-display{
+    background-color: var(--secondary-shade);
+    padding: 1rem 2rem;
+    border: 2px solid var(--secondary-shade);
+    border-radius: 8px;
+    color: var(--primary-base);
+    margin-top: 4rem;
+    font-size: var(--text-base);
+    cursor: pointer;
+
+}
+
+
+
+/* -------------------- components -------------------- */
+#head1{
+    color: var(--black);
+}
+
+#head2{
+    color: var(--primary-base);
+
+}
+#para1{
+    color: var(--secondary-base);
+    margin-top: 2rem;
+}
+
+#toast{ 
+    display: none;
+    background: var(--primary-shade); 
+    color: var(--white); 
+    font-size: var(--text-sm);
+    padding: 15px;
+    position: fixed;
+    top: 20px; 
+    right: 20px;
+    border-radius: 8px;
+
+}
+
+
+
+
+
+
+

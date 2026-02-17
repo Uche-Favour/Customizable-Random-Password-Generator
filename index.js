@@ -20,7 +20,6 @@ function generate(){
 
     let toast = document.getElementById("toast");
 
-    
 
     let allowedChars = ""; //a container for the characters that are allowed to be used in the password by user
 
